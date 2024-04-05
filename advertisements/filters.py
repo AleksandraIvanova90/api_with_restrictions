@@ -8,9 +8,9 @@ class AdvertisementFilter(filters.FilterSet):
     """Фильтры для объявлений."""
 
     # TODO: задайте требуемые фильтры
-    created_at_before = django_filters.DateFromToRangeFilter()
+    created_at = django_filters.DateFromToRangeFilter()
     # status = django_filters.ChoiceFilter(choices=AdvertisementStatusChoices)
 
     class Meta:
         model = Advertisement
-        fields = '__all__'
+        fields =  ['created_at']
